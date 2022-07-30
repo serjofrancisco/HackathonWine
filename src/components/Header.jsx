@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/Header.css';
 import wineLogo from '../images/wine.svg';
 import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
@@ -18,7 +19,7 @@ function Header() {
       </Link>
       <BsSearch />
       <Link to="/carrinho">
-        <img alt="carrinho" src={cartIcon} />
+        <img alt="carrinho" src={cartIcon} className="cart-icon" />
       </Link>
     </header>
   );
