@@ -1,0 +1,40 @@
+:root {
+    /* Cores*/
+    --color-primary: ???;
+    --color-secondary: ???;
+    --color-shadow-grey: ????;
+    --color-orange: rgb(238, 101, 72);
+    --color-orange-dark: rgb(198, 98, 30);
+    --color-pink: rgb(236, 94, 128);
+    --color-pink-dark: rgb(172, 67, 95);
+    --color-green-light: rgb(90, 191, 165);
+    --color-green-moss: rgb(176, 156, 86);
+    }
+    .alert {
+    color: var(--color-orange);
+    }
+
+:root {
+    /* Tipografia */
+    --font-neo: 'neo-sans', 'sans-serif'; 
+    --font-Lato: 'Lato', sans-serif;
+    
+    /* Tipografia Tamanhos */
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 26px;
+    --font-size-h4: 22px;
+    --font-size-h5: 20px;
+    --font-size-h6: 18px;
+    
+    --font-size-base: 16px;
+    --font-size-s: 14px;
+    --font-size-xs: 12px;   
+    
+    /* Tipografia Largura */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+}
