@@ -1,11 +1,13 @@
-import useState from 'react';
-// import { useHistory } from 'react-router-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
-import MyContext from './context';
-
+import { MyContext, MyDispatchContext } from './Context';
 export default function Provider({ children }) {
-  const { Wines, setWines } = useState([]);
-  return <MyContext.Provider value={(Wines, setWines)}>{children}</MyContext.Provider>;
+  const [Wines, setWines] = React.useState([]);
+  return (
+    <MyContext.Provider value={{ Wines }}>
+      <MyDispatchContext.Provider value={{ setWines }}>{children}</MyDispatchContext.Provider>
+    </MyContext.Provider>
+  );
 }
 
 Provider.propTypes = {

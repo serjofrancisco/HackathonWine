@@ -1,22 +1,21 @@
 import { useContext, useEffect } from 'react';
-import getAllWines from '../services/shopApi';
-import Context from '../contexts/context';
+import { getAllWines } from '../services/shopApi';
+import { MyContext, MyDispatchContext } from '../contexts/Context';
 import WineCard from './WineCard';
 import mapWines from '../helpers/mapWines';
 
 export default function WineBanner() {
-  const { Wines, setWines } = useContext(Context);
+  const { Wines } = useContext(MyContext);
+  const { setWines } = useContext(MyDispatchContext);
 
   const getWines = async () => {
-    if (!Wines.length) {
-      const wines = await getAllWines();
-      setWines(wines);
-    }
+    const { items } = await getAllWines();
+    setWines(items);
   };
 
   useEffect(() => {
     getWines();
   }, []);
 
-  return <div>{mapWines((Wines, WineCard))}</div>;
+  return <div>{mapWines(Wines, WineCard, 10, true)}</div>;
 }
