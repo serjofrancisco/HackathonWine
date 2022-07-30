@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import getAllWines from '../services/shopApi';
+import { getAllWines } from '../services/shopApi';
 import Context from '../contexts/context';
 import WineCard from './WineCard';
 import mapWines from '../helpers/mapWines';
