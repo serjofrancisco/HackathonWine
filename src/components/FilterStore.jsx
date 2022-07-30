@@ -28,27 +28,25 @@ export default function FilterStore() {
   };
   function mapFilter() {
     return countries.map((country, i) => (
-      <>
+      <label key={i} htmlFor={country}>
         <input onChange={getValue} key={country} type="radio" value={country} name="countries" />
-        <label key={i} htmlFor={country}>
-          {country}
-        </label>
-      </>
+        {country}
+      </label>
     ));
   }
   return (
     <div>
       {' '}
-      <form name="countries">{mapFilter()}</form>
       <form>
+        <div name="countries">{mapFilter()}</div>
         <input
-          key={minPrice}
+          key="minimo"
           type="number"
           value={minPrice}
           onChange={({ target }) => setMinPrice(target.value)}
         />
         <input
-          key={maxPrice}
+          key="maximo"
           type="number"
           value={maxPrice}
           onChange={({ target }) => setMaxPrice(target.value)}
