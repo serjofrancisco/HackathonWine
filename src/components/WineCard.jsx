@@ -1,4 +1,5 @@
 import React from 'react';
+import { putOnCard } from '../helpers/helpersWines';
 
 export default function WineCard(wine) {
   const {
@@ -17,8 +18,7 @@ export default function WineCard(wine) {
     region,
     flag,
     sommelierComment
-  } = wine.wine;
-
+  } = wine.wine || wine;
   return (
     <section className="wine-card">
       <div className="wine-card-info">
@@ -42,6 +42,7 @@ export default function WineCard(wine) {
         <span>Avaliações:{avaliations}</span>
         <p>{sommelierComment}</p>
       </div>
+      <button onClick={() => putOnCard(wine)}>Comprar</button>
     </section>
   );
 }
