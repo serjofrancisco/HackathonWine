@@ -7,7 +7,7 @@ import cartIcon from '../images/cartIcon.png';
 
 function Header() {
   return (
-    <header className="header">
+    <header className="header" data-testid="header">
       <Link to="/">
         <img alt="Wine" src={wineLogo} />
       </Link>

@@ -9,8 +9,10 @@ export default function WineBanner() {
   const { setWines } = useContext(MyDispatchContext);
 
   const getWines = async () => {
-    const { items } = await getAllWines();
-    setWines(items);
+    if (!Wines.length) { 
+      const { items } = await getAllWines(); 
+      setWines(items); 
+    }
   };
 
   useEffect(() => {

@@ -4,9 +4,7 @@ import Routes from './Routes';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
+    <Routes />
   );
 }
 

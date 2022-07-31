@@ -3,7 +3,7 @@ import wTransparente from '../images/w-transparente.png';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer data-testid="footer">
       <img src={wTransparente} alt="W" />
       <div>
         <h4>W2W E-Commerce de Vinhos S.A.</h4>
