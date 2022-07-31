@@ -29,7 +29,7 @@ export default function StorePage() {
     <div>
       <Header />
       <FilterStore />
-      {mapWines(Filter, WineCard, 10, false, 'store')}
+      {mapWines(Filter, WineCard, 60, false, 'store')}
     </div>
   );
 }

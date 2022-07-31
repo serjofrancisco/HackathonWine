@@ -3,24 +3,25 @@ import { mapWines } from '../helpers/helpersWines';
 import WineCard from '../components/WineCard';
 import { MyDispatchContext, MyContext } from '../contexts/Context';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 import './styles/Checkout.css';
 export default function CartPage() {
   const { Total } = useContext(MyContext);
   const { setTotal } = useContext(MyDispatchContext);
   const cartItems = JSON.parse(localStorage.getItem('cartItems'));
-  let total = 0;
   function getTotal() {
-    total = 0;
+    let fullPrice = Total;
     cartItems.forEach((item) => {
-      total += item.price;
+      fullPrice += item.price;
     });
-    setTotal(total);
+    setTotal(fullPrice);
   }
   useEffect(() => {
     getTotal();
   }, []);
   return (
-    <div className="items">
+    <div>
+      <Header />
       <h1>{`Total R$ ${Total}`}</h1>
       {mapWines(cartItems, WineCard, 100, true, 'cart')}
       <Link to="/checkout">

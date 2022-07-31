@@ -6,10 +6,10 @@ export default function FilterStore() {
   const [countries, setCountries] = useState([]);
   const [vinhos, setVinhos] = useState([]);
   const renderFilters = () => {
-    let countries = vinhos.map((wine) => wine.country);
+    let countries = Wines.map((wine) => wine.country);
     let nonRepeated = [...new Set(countries)];
     setCountries(nonRepeated);
-    let prices = vinhos.map((wine) => wine.price);
+    let prices = Wines.map((wine) => wine.price);
     const max = prices.reduce((a, b) => Math.max(a, b), -Infinity);
     setMaxPrice(max);
     const min = prices.reduce((a, b) => Math.min(a, b), Infinity);
@@ -17,8 +17,10 @@ export default function FilterStore() {
   };
 
   const putOnState = () => {
-    if (vinhos.length === 0) setVinhos(Wines);
-    renderFilters();
+    if (!vinhos.length) {
+      setVinhos(Wines);
+      renderFilters();
+    }
   };
 
   useEffect(() => {

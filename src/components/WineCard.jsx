@@ -23,8 +23,15 @@ export default function WineCard(wine) {
             <a className="preco-membro"> R$ {priceMember.toFixed(2)}</a>
           </span>
         </div>
+
+        {page && (
+          <button className="buyButton" onClick={() => putOnCard(wine)}>
+            Comprar
+          </button>
+        )}
+
         <div className="container-wine-card-rating"></div>
-        {page && <button onClick={() => putOnCard(wine)}>Comprar</button>}
+
       </div>
     </div>
   );
