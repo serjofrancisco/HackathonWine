@@ -20,10 +20,10 @@ function Header() {
         <Link to="/loja">
           <span>Loja</span>
         </Link>
-        <Link to="/">
+        <Link to="/produtores">
           <span>Produtores</span>
         </Link>
-        <Link to="/">
+        <Link to="/ofertas">
           <span>Ofertas</span>
         </Link>
       </div>
