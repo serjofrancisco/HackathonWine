@@ -5,7 +5,6 @@ import { mapWines } from '../helpers/helpersWines';
 import { getAllWines } from '../services/shopApi';
 import Carousel from './Carousel';
 import './styles/WineCard.css';
-import { Link } from 'react-router-dom';
 
 export default function WineBanner() {
   const { Wines } = useContext(MyContext);
@@ -23,14 +22,12 @@ export default function WineBanner() {
   }, []);
 
   return (
-    <Link to="/loja">
-      <section className="container-section-wine-card" data-testid="wine-banner">
-        {Wines.length && (
-          <Carousel perView="4" autoplay="1500">
-            {mapWines(Wines, WineCard, 60, true, 'banner')}
-          </Carousel>
-        )}
-      </section>
-    </Link>
+    <section className="container-section-wine-card" data-testid="wine-banner">
+      {Wines.length && (
+        <Carousel perView="4" autoplay="1500">
+          {mapWines(Wines, WineCard, 60, true, 'banner')}
+        </Carousel>
+      )}
+    </section>
   );
 }
