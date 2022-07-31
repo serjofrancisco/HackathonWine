@@ -18,7 +18,6 @@ export default function LandingPage() {
       <WineBanner />
 
       <FilterStore />
-
       <div className="container-geral-landing-page">
         <div className="container-landing-page">
           <Header />

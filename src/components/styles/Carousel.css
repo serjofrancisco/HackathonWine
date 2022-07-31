@@ -1,0 +1,4 @@
+.glide__slide * {
+  display: flex;
+  flex-direction: column;
+}
