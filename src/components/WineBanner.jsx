@@ -19,5 +19,5 @@ export default function WineBanner() {
     getWines();
   }, []);
 
-  return <div>{mapWines(Wines, WineCard, 10, true)}</div>;
+  return <div data-testid="wine-banner">{mapWines(Wines, WineCard, 10, true)}</div>;
 }

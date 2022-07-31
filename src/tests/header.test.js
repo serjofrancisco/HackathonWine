@@ -1,11 +1,7 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { MemoryRouter, unstable_HistoryRouter } from 'react-router-dom';
-import App from '../App';
+import { screen } from '@testing-library/react';
 import Header from '../components/Header';
 import renderWithRouter from './helpers/renderWithRouter';
-import renderWithProvider from './helpers/renderWithProvider';
 
 describe('Testa o componente Header', () => {
     beforeEach(() => {

@@ -21,7 +21,7 @@ export default function WineCard(wine) {
   console.log(wine);
   return (
     <section className="wine-card">
-      <div className="wine-card-info">
+      <div className="wine-card-info" data-testid="winecard">
         <h3>{name}</h3>
         <span>{size}</span>
         <span>{type}</span>

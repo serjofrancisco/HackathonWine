@@ -1,10 +1,7 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { MemoryRouter, unstable_HistoryRouter } from 'react-router-dom';
+import { screen } from '@testing-library/react';
 import  Footer from '../components/Footer';
 import renderWithRouter from './helpers/renderWithRouter';
-import renderWithProvider from './helpers/renderWithProvider';
 
 describe('Testa o componente Footer', () => {
     beforeEach(() => {
