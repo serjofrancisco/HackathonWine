@@ -30,9 +30,6 @@ function Header() {
       </div>
       <div className="header-rigth">
         <SearchOption />
-        <Link to="/cart">
-          <img alt="carrinho" src={wineCart} className="cart-icon" />
-        <BsSearch />
         <Link to="/carrinho">
           <img alt="carrinho" src={cartItems ? cartFull : wineCart} className="cart-icon" />
         </Link>
