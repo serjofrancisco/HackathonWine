@@ -1,23 +1,17 @@
 import React from 'react';
 import Header from '../components/Header';
-
 import WineBanner from '../components/WineBanner';
+import StoresCarousel from '../components/StoresCarousel';
 import Footer from '../components/Footer';
-import FilterStore from '../components/FilterStore';
-// import bannerLandingPage from '../../src/images/banner-header-landing-page.jpg';
-// import clubeExplication from '../../src/images/como-funciona-clube.png';
 import wineMain from '../../src/images/wine-main.svg';
-// import wine3 from '../../src/images/wine3.svg';
-import './styles/LandingPage.css';
-
+import bannerPromo1 from '../../src/images/banner-promo-1.jpg';
+import bannerPromo2 from '../../src/images/banner-promo-2.png';
+import bannerLojas from '../../src/images/banner-lojas-fisicas.png';
+import '../pages/styles/LandingPage.css';
 
 export default function LandingPage() {
   return (
     <>
-      <Header />
-      <WineBanner />
-      <Footer />
-      <FilterStore />
       <div className="container-geral-landing-page">
         <div className="container-landing-page">
           <Header />
@@ -30,9 +24,21 @@ export default function LandingPage() {
                 Se Conecte com pessoas, se Conecte com mundo, por meio da paixão por vinho.
               </h3>
             </div>
+            <button>Assine agora</button>
             <div className="container-imagem-banner-landing-page">
               <img className="imagem-vinho-ariki" alt="vinho-ariki" src={wineMain} />
             </div>
+          </section>
+          <section className="container-section-banner-promo">
+            <div className="container-banner-promo">
+              <img className="banner-promo1" src={bannerPromo1} alt="banner Promoção" />
+              <img className="banner-promo2" src={bannerPromo2} alt="banner Promoção" />
+            </div>
+          </section>
+          <WineBanner />
+          <section className="container-section-carousel">
+            <img className="imagem-banner-loja-fisica" src={bannerLojas} alt="banner Lojas" />
+            <StoresCarousel />
           </section>
           <Footer />
         </div>
