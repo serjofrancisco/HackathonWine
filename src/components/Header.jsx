@@ -7,7 +7,7 @@ import wineCart from '../images/wine-cart.svg';
 
 function Header() {
   return (
-    <header className="header">
+    <header className="header" data-testid="header">
       <div className="header-left">
         <Link to="/">
           <img alt="Wine" src={wineLogo} />
