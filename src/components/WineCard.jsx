@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles/WineCard.css';
+import { putOnCard } from '../helpers/helpersWines';
+
 
 export default function WineCard(wine) {
   const {
@@ -18,8 +20,7 @@ export default function WineCard(wine) {
     // region,
     flag
     // sommelierComment
-  } = wine.wine;
-
+  } = wine.wine || wine;
   return (
     <div className="container-geral-wine-card">
       <div className="container-wine-card">
@@ -44,7 +45,7 @@ export default function WineCard(wine) {
           {/* <span>Avaliações:{avaliations}</span> */}
           {/* <p>{sommelierComment}</p> */}
         </div>
-        <button> Adicionar</button>
+        <button onClick={() => putOnCard(wine)}>Comprar</button>
       </div>
     </div>
   );
