@@ -14,8 +14,6 @@ export default function LandingPage() {
   return (
     <>
       {/* <Header /> */}
-      <WineBanner />
-      <FilterStore />
       <div className="container-geral-landing-page">
         <div className="container-landing-page">
           <Header />
@@ -32,6 +30,8 @@ export default function LandingPage() {
               <img className="imagem-vinho-ariki" alt="vinho-ariki" src={wineMain} />
             </div>
           </section>
+          <WineBanner />
+          <FilterStore />
           <Footer />
         </div>
       </div>

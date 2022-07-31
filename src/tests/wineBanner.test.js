@@ -5,19 +5,19 @@ import renderWithProvider from './helpers/renderWithProvider';
 import WineBanner from '../components/WineBanner';
 
 describe('Testa o componente WineCard', () => {
-    beforeEach(() => {
-        renderWithRouter(renderWithProvider(<WineBanner />));
-      });
-    it('verifica se o banner com os vinhos é renderizado', () => {
-        const wineBanner = screen.getByTestId('wine-banner');
-        expect(wineBanner).toBeInTheDocument();
-    })
-    it('verifica se ele possui a quantidade correta de vinhos', () => {
-        const wineCard = screen.getAllByTestId('winecard');
-        expect(wineCard).toHaveLength(10);
-    });
-    it('verifica os cards possuem a propriedade h3', () => {
-        const h3 = screen.getAllByRole('heading', {level: 3});
-        expect(h3).toHaveLength(10);
-    });
+  beforeEach(() => {
+    renderWithRouter(renderWithProvider(<WineBanner />));
+  });
+  it('verifica se o banner com os vinhos é renderizado', () => {
+    const wineBanner = screen.getByTestId('wine-banner');
+    expect(wineBanner).toBeInTheDocument();
+  });
+  it('verifica se ele possui a quantidade correta de vinhos', () => {
+    const wineCard = screen.getAllByTestId('winecard');
+    expect(wineCard).toHaveLength(10);
+  });
+  it('verifica os cards possuem a propriedade h3', () => {
+    const h3 = screen.getAllByRole('heading', { level: 3 });
+    expect(h3).toHaveLength(10);
+  });
 });
