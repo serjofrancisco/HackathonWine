@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function StoreCard({ store }) {
   const { imgUrl, title, address, phone, mapsUrl } = store;
   return (
-    <div>
+    <span>
       <img alt="Fachada da loja" src={imgUrl} />
       <h3>{title}</h3>
       <address>{address}</address>
@@ -16,7 +16,7 @@ export default function StoreCard({ store }) {
       <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
         <MdLocationOn />
       </a>
-    </div>
+    </span>
   );
 }
 
