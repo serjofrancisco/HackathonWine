@@ -3,37 +3,34 @@ import './styles/Header.css';
 import wineLogo from '../images/wine.svg';
 import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
-import cartIcon from '../images/cartIcon.png';
+import wineCart from '../images/wine-cart.svg';
 
 function Header() {
   return (
     <header className="header">
-      <div className="header-logo">
+      <div className="header-left">
         <Link to="/">
           <img alt="Wine" src={wineLogo} />
         </Link>
+        <Link to="/clube">
+          <span>Clube</span>
+        </Link>
+        <Link to="/loja">
+          <span>Loja</span>
+        </Link>
+        <Link to="/">
+          <span>Produtores</span>
+        </Link>
+        <Link to="/">
+          <span>Ofertas</span>
+        </Link>
       </div>
-      <div className="header-container-loja-clube">
-        <div className="header-clube">
-          <Link to="/clube">
-            <span>Clube</span>
-          </Link>
-        </div>
-        <div className="header-loja">
-          <Link to="/loja">
-            <span>Loja</span>
-          </Link>
-        </div>
-      </div>
-      <div className="header-search">
+      <div className="header-rigth">
         <BsSearch />
-      </div>
-      <div className="header-container-cart">
-        <div className="header-cart">
-          <Link to="/carrinho">
-            <img alt="carrinho" src={cartIcon} className="cart-icon" />
-          </Link>
-        </div>
+        <Link to="/carrinho">
+          <img alt="carrinho" src={wineCart} className="cart-icon" />
+        </Link>
+        <button className="btn-login">Login</button>
       </div>
     </header>
   );

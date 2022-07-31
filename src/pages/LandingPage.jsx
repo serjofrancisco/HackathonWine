@@ -3,8 +3,9 @@ import Header from '../components/Header';
 // import WineBanner from '../components/WineBanner';
 // import bannerLandingPage from '../../src/images/banner-header-landing-page.jpg';
 // import clubeExplication from '../../src/images/como-funciona-clube.png';
-import vinhoAriki from '../../src/images/vinho-ariki.png';
-// import Footer from '../components/Footer';
+import wineMain from '../../src/images/wine-main.svg';
+// import wine3 from '../../src/images/wine3.svg';
+import Footer from '../components/Footer';
 import './styles/LandingPage.css';
 
 export default function LandingPage() {
@@ -13,28 +14,20 @@ export default function LandingPage() {
       <div className="container-geral-landing-page">
         <div className="container-landing-page">
           <Header />
-          <div className="container-geral-banner-landing-page">
-            <div className="container-banner-landing-page">
-              <div className="container-texto-banner-landing-page">
-                <h1>O maior clube de vinho do mundo!</h1>
-                <h3>Se Conect com pessoas...</h3>
-                <h3>Se Conect com mundo...</h3>
-                <h3>por meio da paixão por vinho.</h3>
-              </div>
-              <div className="container-imagem-banner-landing-page">
-                <img className="imagem-vinho-ariki" alt="vinho-ariki" src={vinhoAriki} />
-              </div>
+          <section className="container-geral-banner-landing-page">
+            <div className="container-texto-banner-landing-page">
+              <h1 className="title-main">
+                O maior clube de vinho <br /> do mundo!
+              </h1>
+              <h3 className="subtittle-main">
+                Se Conecte com pessoas, se Conecte com mundo, por meio da paixão por vinho.
+              </h3>
             </div>
-          </div>
-          <div className="container-main-landing-page">
-            <main>
-              {/* <div className="container-explication-landing-page">
-            <img alt="explication" src={clubeExplication} />
-          </div> */}
-              {/* <WineBanner /> */}
-            </main>
-          </div>
-          {/* <Footer /> */}
+            <div className="container-imagem-banner-landing-page">
+              <img className="imagem-vinho-ariki" alt="vinho-ariki" src={wineMain} />
+            </div>
+          </section>
+          <Footer />
         </div>
       </div>
     </>
