@@ -1,0 +1,38 @@
+.container-geral-landing-page {
+  background: var(--color-secondary);
+  border: 1px solid;
+  height: 100vh;
+}
+
+.container-landing-page {
+  border: 1px red solid;
+  margin-top: 20px;
+}
+
+.container-geral-banner-landing-page {
+  border: 1px blue solid;
+  background-color: var(--color-primary);
+  margin: 0 20px;
+ background: url(https://www.wine.com.br/clubewine/build/img/tangram-desk.png),
+    linear-gradient(180deg, #fff 33.85%, rgba(255, 255, 255, 0) 100%), var(--color-primary);
+  background-repeat: no-repeat;
+  background-position: right bottom 80px, bottom center;
+  /* transform: rotate(90deg); */
+}
+
+.container-banner-landing-page {
+  border: 1px red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30%;
+}
+
+.container-texto-banner-landing-page {
+  border: 1px red solid;
+}
+
+.imagem-vinho-ariki {
+  width: 70%;
+  height: auto;
+}
