@@ -2,9 +2,9 @@ import React from 'react';
 import './styles/Header.css';
 import wineLogo from '../images/wine.svg';
 import { Link } from 'react-router-dom';
-import { BsSearch } from 'react-icons/bs';
 import { FiLogIn } from 'react-icons/fi';
 import wineCart from '../images/wine-cart.svg';
+import SearchOption from './SearchOption';
 import cartFull from '../images/cart-full.png';
 
 function Header() {
@@ -29,8 +29,7 @@ function Header() {
         </Link>
       </div>
       <div className="header-rigth">
-        <BsSearch />
-
+        <SearchOption />
         <Link to="/carrinho">
           <img alt="carrinho" src={cartItems ? cartFull : wineCart} className="cart-icon" />
         </Link>
