@@ -5,7 +5,7 @@ import './styles/Footer.css';
 export default function Footer() {
   return (
     <footer>
-      <div className="footer-endereço-cnpj">
+      <div className="footer-endereço-cnpj" data-testid="footer">
         <img className="footer-logo" src={wTransparente} alt="W" />
         <div className="footer-cnpj">
           <h4>W2W E-Commerce de Vinhos S.A.</h4>

@@ -1,0 +1,15 @@
+.store-buttons-container {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: right;
+  padding-bottom: 5px;
+}
+
+.store-buttons-container a {
+  margin: 3px;
+  transition: 0.5s;
+}
+
+.store-buttons-container a:hover {
+  transform: rotate(20deg) scale(1.5);
+}

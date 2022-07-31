@@ -22,16 +22,11 @@ export default function WineCard(wine) {
   } = wine.wine || wine;
   return (
     <div className="container-geral-wine-card">
-      <div className="container-wine-card">
-        <div className="container-nome-flag-wine">
-          {/* <span>Nota:{rating}</span> */}
-          {/* <span>{size}</span> */}
-          {/* <span>{type}</span> */}
-          {/* <span>{classification}</span> */}
-          {/* <span>{`País:${country}Região: ${region}`}</span> */}
-          <img className="imagem-winecard-bandeira" src={flag} alt={country} />
-          <img className="imagem-winecard-vinho" src={image} alt={name} />
-        </div>
+      {/* <div className="container-wine-card" data-testid="winecard"> */}
+      <div className="container-nome-flag-wine">
+        <img className="imagem-winecard-bandeira" src={flag} alt={country} />
+        <img className="imagem-winecard-vinho" src={image} alt={name} />
+        {/* </div> */}
         <h3 className="wine-name-WineCard">{name}</h3>
         <div className="container-wine-card-prices">
           <span></span>

@@ -26,6 +26,7 @@
 .imagem-winecard-vinho {
   width: 50%;
   height: auto;
+  align-self: center;
 }
 
 .wine-name-WineCard {
