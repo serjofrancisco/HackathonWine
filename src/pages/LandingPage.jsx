@@ -5,22 +5,18 @@ import WineBanner from '../components/WineBanner';
 import Footer from '../components/Footer';
 import FilterStore from '../components/FilterStore';
 
-
 // import bannerLandingPage from '../../src/images/banner-header-landing-page.jpg';
 // import clubeExplication from '../../src/images/como-funciona-clube.png';
 import wineMain from '../../src/images/wine-main.svg';
 // import wine3 from '../../src/images/wine3.svg';
-import Footer from '../components/Footer';
 import './styles/LandingPage.css';
-
 
 export default function LandingPage() {
   return (
     <>
-
       <Header />
       <WineBanner />
-      <Footer />
+
       <FilterStore />
 
       <div className="container-geral-landing-page">

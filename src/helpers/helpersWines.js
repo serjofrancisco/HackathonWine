@@ -1,7 +1,7 @@
 export function mapWines(Wines, WineCard, limit, sorted) {
   if (sorted) Wines.sort(() => Math.random() - 0.5);
-
-  return Wines.map((wine, i) => i < limit && <WineCard wine={wine} key={wine.id} />);
+  console.log(Wines);
+  return Wines.map((wine, i) => i < limit && <WineCard {...wine} key={wine.id} />);
 }
 
 export function filterWines(Wines, countryFilter, minPrice, maxPrice) {
@@ -12,4 +12,10 @@ export function filterWines(Wines, countryFilter, minPrice, maxPrice) {
       wine.country.toLowerCase().includes(countryFilter.toLowerCase())
     );
   });
+}
+
+export function putOnCard(wine) {
+  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const newCartItems = [...cartItems, wine];
+  localStorage.setItem('cartItems', JSON.stringify(newCartItems));
 }
