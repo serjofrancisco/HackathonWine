@@ -1,15 +1,27 @@
 import React from 'react';
 import Header from '../components/Header';
-// import WineBanner from '../components/WineBanner';
+
+import WineBanner from '../components/WineBanner';
+import Footer from '../components/Footer';
+import FilterStore from '../components/FilterStore';
+
+
 // import bannerLandingPage from '../../src/images/banner-header-landing-page.jpg';
 // import clubeExplication from '../../src/images/como-funciona-clube.png';
 import vinhoAriki from '../../src/images/vinho-ariki.png';
 // import Footer from '../components/Footer';
 import './styles/LandingPage.css';
 
+
 export default function LandingPage() {
   return (
     <>
+
+      <Header />
+      <WineBanner />
+      <Footer />
+      <FilterStore />
+
       <div className="container-geral-landing-page">
         <div className="container-landing-page">
           <Header />
