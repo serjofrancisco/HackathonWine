@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/WineCard.css';
 import { putOnCard } from '../helpers/helpersWines';
 
 export default function WineCard(wine) {
@@ -9,40 +10,42 @@ export default function WineCard(wine) {
     discount,
     priceMember,
     priceNonMember,
-    type,
-    classification,
-    size,
-    rating,
-    avaliations,
+    // type,
+    // classification,
+    // size,
+    // rating,
+    // avaliations,
     country,
-    region,
-    flag,
-    sommelierComment
+    // region,
+    flag
+    // sommelierComment
   } = wine.wine || wine;
   return (
-    <section className="wine-card">
-      <div className="wine-card-info" data-testid="winecard">
-        <h3>{name}</h3>
-        <span>{size}</span>
-        <span>{type}</span>
-        <span>{classification}</span>
-        <span>{`País:${country}Região: ${region}`}</span>
-        <img src={flag} alt={country} />
-        <img src={image} alt={name} />
+    <div className="container-geral-wine-card">
+      <div className="container-wine-card" data-testid="winecard">
+        <div className="container-nome-flag-wine">
+          {/* <span>Nota:{rating}</span> */}
+          {/* <span>{size}</span> */}
+          {/* <span>{type}</span> */}
+          {/* <span>{classification}</span> */}
+          {/* <span>{`País:${country}Região: ${region}`}</span> */}
+          <img className="imagem-winecard-bandeira" src={flag} alt={country} />
+          <img className="imagem-winecard-vinho" src={image} alt={name} />
+        </div>
+        <h3 className="wine-name-WineCard">{name}</h3>
+        <div className="container-wine-card-prices">
+          <span></span>
+          <span>R${price}</span>
+          <span>R${discount}</span>
+          <span>Preço - R${priceNonMember}</span>
+          <span>Preço para Membros- R${priceMember}</span>
+        </div>
+        <div className="container-wine-card-rating">
+          {/* <span>Avaliações:{avaliations}</span> */}
+          {/* <p>{sommelierComment}</p> */}
+        </div>
+        <button onClick={() => putOnCard(wine)}>Comprar</button
       </div>
-      <div className="wine-card-prices">
-        <span></span>
-        <span>R${price}</span>
-        <span>R${discount}</span>
-        <span>Preço - R${priceNonMember}</span>
-        <span>Preço para Membros- R${priceMember}</span>
-      </div>
-      <div className="wine-card-rating">
-        <span>Nota:{rating}</span>
-        <span>Avaliações:{avaliations}</span>
-        <p>{sommelierComment}</p>
-      </div>
-      <button onClick={() => putOnCard(wine)}>Comprar</button>
-    </section>
+    </div>
   );
 }

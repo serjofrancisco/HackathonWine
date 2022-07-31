@@ -1,18 +1,21 @@
 import React from 'react';
 import wTransparente from '../images/w-transparente.png';
+import './styles/Footer.css';
 
 export default function Footer() {
   return (
-    <footer data-testid="footer">
-      <img src={wTransparente} alt="W" />
-      <div>
-        <h4>W2W E-Commerce de Vinhos S.A.</h4>
-        <span>CNPJ: 09.813.204/0002-05</span>
+    <footer>
+      <div className="footer-endereço-cnpj" data-testid="footer">
+        <img className="footer-logo" src={wTransparente} alt="W" />
+        <div className="footer-cnpj">
+          <h4>W2W E-Commerce de Vinhos S.A.</h4>
+          <span>CNPJ: 09.813.204/0002-05</span>
+        </div>
+        <p className="footer-endereço">
+          Rua Comendador Alcides Simão Helou, 1478 <br /> Serra - ES - CEP 29168-090
+        </p>
       </div>
-      <p>
-        Rua Comendador Alcides Simão Helou, 1478 <br /> Serra - ES - CEP 29168-090
-      </p>
-      <p>
+      <p className="footer-aviso">
         SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA
         MENORES DE 18 ANOS.
       </p>

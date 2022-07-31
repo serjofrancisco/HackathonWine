@@ -9,10 +9,7 @@ export default function RoutePaths() {
     <Routes>
       <Route exact path="/" element={<LandingPage />} />
       <Route exact path="/webstore" element={<StorePage />} />
-
       <Route exact path="/cart" element={<CartPage />} />
-
-      <Route exact path="/webStore" element={<StorePage />} />
     </Routes>
   );
 }
