@@ -10,7 +10,7 @@ export default function Carousel(props) {
 
   useEffect(() => {
     new Glide('.glide', { type: 'carousel', autoplay, perView, hoverpause: true }).mount();
-  }, []);
+  }, [children]);
 
   return (
     <div className="glide">
