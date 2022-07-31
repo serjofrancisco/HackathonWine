@@ -18,7 +18,7 @@ export default function WineCard(wine) {
     flag,
     sommelierComment
   } = wine.wine;
-  console.log(wine);
+
   return (
     <section className="wine-card">
       <div className="wine-card-info">

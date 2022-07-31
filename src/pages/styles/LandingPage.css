@@ -1,0 +1,28 @@
+.container-geral-banner-landing-page {
+  width: 100%;
+  height: 60vh;
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-banner-landing-page {
+  border: 1px red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30%;
+}
+
+.title-main {
+  font-size: 40px;
+}
+
+.container-texto-banner-landing-page {
+  border: 1px red solid;
+}
+
+.imagem-vinho-ariki {
+  width: 100%;
+  height: auto;
+}
