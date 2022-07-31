@@ -1,6 +1,53 @@
 .header {
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  align-items: center;
+  background: var(--color-primary);
+  margin: 10px 20px 0 20px;
+}
+
+.header-logo img {
   width: 100%;
+  height: auto;
+}
+
+.header-logo {
+  padding: 20px;
+}
+
+.header-container-loja-clube {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-bold);
+}
+
+.header-clube,
+.header-loja {
+  padding: 10px;
+}
+
+.header-search {
+  padding: 0 40px;
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.header-container-cart {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-cart {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.header-cart img {
+  width: 30px;
 }
