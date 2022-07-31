@@ -44,7 +44,7 @@ export default function WineCard(wine) {
           {/* <span>Avaliações:{avaliations}</span> */}
           {/* <p>{sommelierComment}</p> */}
         </div>
-        <button onClick={() => putOnCard(wine)}>Comprar</button
+        <button onClick={() => putOnCard(wine)}>Comprar</button>
       </div>
     </div>
   );

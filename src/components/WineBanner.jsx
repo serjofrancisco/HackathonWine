@@ -19,6 +19,8 @@ export default function WineBanner() {
   }, []);
 
   return (
-    <section className="container-section-wine-card" data-testid="wine-banner">{mapWines(Wines, WineCard, 5, true)}</section>
+    <section className="container-section-wine-card" data-testid="wine-banner">
+      {mapWines(Wines, WineCard, 5, true)}
+    </section>
   );
 }
