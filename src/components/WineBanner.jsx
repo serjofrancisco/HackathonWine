@@ -8,12 +8,14 @@ export default function WineBanner() {
   const { setWines } = useContext(MyDispatchContext);
 
   const getWines = async () => {
-    const { items } = await getAllWines();
-    setWines(items);
+    if (!Wines.length) { 
+      const { items } = await getAllWines(); 
+      setWines(items); 
+    }
   };
   useEffect(() => {
     getWines();
   }, []);
 
-  return <div>{mapWines(Wines, WineCard, 10, true)}</div>;
+  return <div data-testid="wine-banner">{mapWines(Wines, WineCard, 10, true)}</div>;
 }

@@ -5,7 +5,7 @@ import StorePage from './pages/StorePage';
 
 import CartPage from './pages/CartPage';
 
-import OurStoresPage from './pages/OurStoresPage';
+// import OurStoresPage from './pages/OurStoresPage';
 
 export default function RoutePaths() {
   return (
@@ -15,7 +15,7 @@ export default function RoutePaths() {
 
       <Route exact path="/cart" element={<CartPage />} />
 
-      <Route exact path="/lojas" element={<OurStoresPage />} />
+      {/* <Route exact path="/lojas" element={<OurStoresPage />} /> */}
 
       <Route exact path="/webStore" element={<StorePage />} />
 

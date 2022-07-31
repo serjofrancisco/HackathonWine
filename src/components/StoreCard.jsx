@@ -6,14 +6,13 @@ import PropTypes from 'prop-types';
 export default function StoreCard({ store }) {
   const { imgUrl, title, address, phone, mapsUrl } = store;
   return (
-    <span>
+    <span data-testid="store-card">
       <img alt="Fachada da loja" src={imgUrl} />
       <h3>{title}</h3>
       <address>{address}</address>
-      <a href={`https://wa.me/${phone}`} target="_blank" rel="noopener noreferrer">
-        <BsWhatsapp />
+      <a href={`https://wa.me/${phone}`} target="_blank" rel="noopener noreferrer" data-testid="phone">        <BsWhatsapp />
       </a>
-      <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
+      <a href={mapsUrl} target="_blank" rel="noopener noreferrer" data-testid="maps">
         <MdLocationOn />
       </a>
     </span>

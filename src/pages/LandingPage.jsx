@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-
 import WineBanner from '../components/WineBanner';
 import Footer from '../components/Footer';
 import FilterStore from '../components/FilterStore';
@@ -14,9 +13,8 @@ import './styles/LandingPage.css';
 export default function LandingPage() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <WineBanner />
-
       <FilterStore />
       <div className="container-geral-landing-page">
         <div className="container-landing-page">
