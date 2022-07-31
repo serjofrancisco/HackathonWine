@@ -20,8 +20,8 @@ describe('Testa a página inicial', () => {
         const wineBanner = screen.getByTestId('wine-banner');
         expect(wineBanner).toBeInTheDocument();
     });
-    /* it('verifica se o componente StoreCard é renderizado', () => {
+    it('verifica se o componente StoreCard é renderizado', () => {
         const storeCard = screen.getByTestId('store-card');
         expect(storeCard).toBeInTheDocument();
-    }); */
+    });
 });
