@@ -41,7 +41,7 @@ Carousel.defaultProps = {
 };
 
 Carousel.propTypes = {
-  perView: PropTypes.number.isRequired,
-  autoplay: PropTypes.number,
+  perView: PropTypes.string.isRequired,
+  autoplay: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),
   children: PropTypes.arrayOf(PropTypes.element).isRequired
 };
