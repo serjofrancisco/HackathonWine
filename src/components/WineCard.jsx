@@ -2,7 +2,6 @@ import React from 'react';
 import './styles/WineCard.css';
 import { putOnCard } from '../helpers/helpersWines';
 
-
 export default function WineCard(wine) {
   const {
     name,
