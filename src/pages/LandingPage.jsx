@@ -38,8 +38,8 @@ export default function LandingPage() {
           <WineBanner />
           <section className="container-section-carousel">
             <img className="imagem-banner-loja-fisica" src={bannerLojas} alt="banner Lojas" />
-            <StoresCarousel />
           </section>
+          <StoresCarousel />
           <Footer />
         </div>
       </div>
