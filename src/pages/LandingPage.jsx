@@ -23,8 +23,8 @@ export default function LandingPage() {
               <h3 className="subtittle-main">
                 Se Conecte com pessoas, se Conecte com mundo, por meio da paixão por vinho.
               </h3>
+              <button id="btn-sign">Assine agora</button>
             </div>
-            <button>Assine agora</button>
             <div className="container-imagem-banner-landing-page">
               <img className="imagem-vinho-ariki" alt="vinho-ariki" src={wineMain} />
             </div>

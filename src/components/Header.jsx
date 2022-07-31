@@ -3,6 +3,7 @@ import './styles/Header.css';
 import wineLogo from '../images/wine.svg';
 import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
+import { FiLogIn } from 'react-icons/fi';
 import wineCart from '../images/wine-cart.svg';
 
 function Header() {
@@ -27,10 +28,15 @@ function Header() {
       </div>
       <div className="header-rigth">
         <BsSearch />
-        <Link to="/carrinho">
+        <Link to="/cart">
           <img alt="carrinho" src={wineCart} className="cart-icon" />
         </Link>
-        <button className="btn-login">Login</button>
+        <button className="btn-login">
+          <div>
+            <FiLogIn />
+          </div>
+          <span className="login">Login</span>
+        </button>
       </div>
     </header>
   );
