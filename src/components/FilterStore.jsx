@@ -1,30 +1,32 @@
 import { useContext, useState, useEffect } from 'react';
-import { MyContext } from '../contexts/Context';
+import { MyContext, MyDispatchContext } from '../contexts/Context';
 export default function FilterStore() {
-  const { Wines } = useContext(MyContext);
-
-  const [maxPrice, setMaxPrice] = useState(0);
-  const [minPrice, setMinPrice] = useState(0);
-  const [countryFilter, setCountryFilter] = useState('');
+  const { Wines, maxPrice, minPrice } = useContext(MyContext);
+  const { setCountryFilter, setMaxPrice, setMinPrice } = useContext(MyDispatchContext);
   const [countries, setCountries] = useState([]);
+  const [vinhos, setVinhos] = useState([]);
   const renderFilters = () => {
-    let countries = Wines.map((wine) => wine.country);
+    let countries = vinhos.map((wine) => wine.country);
     let nonRepeated = [...new Set(countries)];
     setCountries(nonRepeated);
-    let prices = Wines.map((wine) => wine.price);
+    let prices = vinhos.map((wine) => wine.price);
     const max = prices.reduce((a, b) => Math.max(a, b), -Infinity);
     setMaxPrice(max);
     const min = prices.reduce((a, b) => Math.min(a, b), Infinity);
     setMinPrice(min);
   };
 
-  useEffect(() => {
+  const putOnState = () => {
+    if (vinhos.length === 0) setVinhos(Wines);
     renderFilters();
+  };
+
+  useEffect(() => {
+    putOnState();
   }, [Wines]);
 
   const getValue = ({ target }) => {
     setCountryFilter(target.value);
-    console.log(countryFilter);
   };
   function mapFilter() {
     return countries.map((country, i) => (
