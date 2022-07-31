@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Glide from '@glidejs/glide';
 import PropTypes from 'prop-types';
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import '@glidejs/glide/dist/css/glide.core.min.css';
 import '@glidejs/glide/dist/css/glide.theme.min.css';
 import './styles/Carousel.css';
@@ -24,10 +25,10 @@ export default function Carousel(props) {
         </ul>
         <div className="glide__arrows" data-glide-el="controls">
           <button className="glide__arrow glide__arrow--left" data-glide-dir="<">
-            prev
+            <BsArrowLeftCircleFill color="black" size="2rem" />
           </button>
           <button className="glide__arrow glide__arrow--right" data-glide-dir=">">
-            next
+            <BsArrowRightCircleFill color="black" size="2rem" />
           </button>
         </div>
       </div>
