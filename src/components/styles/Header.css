@@ -2,8 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--color-primary);
-  margin: 10px 20px 0 20px;
+  height: 20vh;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: space-around;
+}
+
+.header-rigth {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-around;
 }
 
 .header-logo img {
@@ -15,21 +28,16 @@
   padding: 20px;
 }
 
+.cart-icon {
+  width: 100%;
+}
+
 .header-container-loja-clube {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   font-size: var(--font-size-h6);
   font-weight: var(--font-bold);
-}
-
-.header-clube,
-.header-loja {
-  padding: 10px;
-}
-
-.header-search {
-  padding: 0 40px;
 }
 
 a:link {
@@ -42,11 +50,6 @@ a:link {
   justify-content: flex-end;
 }
 
-.header-cart {
-  display: flex;
-  align-items: center;
-  padding: 0 50px;
-}
 
 .header-cart img {
   width: 30px;
