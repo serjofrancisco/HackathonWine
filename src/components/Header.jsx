@@ -4,8 +4,10 @@ import wineLogo from '../images/wine.svg';
 import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 import wineCart from '../images/wine-cart.svg';
+import cartFull from '../images/cart-full.png';
 
 function Header() {
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
   return (
     <header className="container-geral-header" data-testid="header">
       <div className="header-left">
@@ -28,7 +30,7 @@ function Header() {
       <div className="header-rigth">
         <BsSearch />
         <Link to="/carrinho">
-          <img alt="carrinho" src={wineCart} className="cart-icon" />
+          <img alt="carrinho" src={cartItems ? cartFull : wineCart} className="cart-icon" />
         </Link>
         <button className="btn-login">Login</button>
       </div>

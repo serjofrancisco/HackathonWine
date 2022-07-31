@@ -1,5 +1,8 @@
 .container-geral-wine-card {
     display: inline-block;
-    width: 25%;
     padding: 10px;
+}
+
+.buyButton {
+    width: 100%;
 }
