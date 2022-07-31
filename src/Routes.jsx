@@ -9,7 +9,6 @@ import CompraFeita from './pages/CompraFeita';
 
 import PaginaConstrucao from './components/paginaConstrucao';
 
-
 export default function RoutePaths() {
   return (
     <Routes>
@@ -24,7 +23,6 @@ export default function RoutePaths() {
       <Route exact path="/clube" element={<PaginaConstrucao />} />
       <Route exact path="/produtores" element={<PaginaConstrucao />} />
       <Route exact path="/ofertas" element={<PaginaConstrucao />} />
-
     </Routes>
   );
 }
