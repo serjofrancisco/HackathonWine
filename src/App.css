@@ -7,8 +7,8 @@
 :root {
   /* Cores*/
   --color-primary: white;
-  --color-secondary: #686868;
-  --color-shadow-grey: ????;
+  --color-secondary: #f5f5f5;
+  --color-shadow-grey: #686868;
   --color-orange: rgb(238, 101, 72);
   --color-orange-dark: rgb(198, 98, 30);
   --color-pink: rgb(236, 94, 128);
@@ -47,8 +47,6 @@ body {
   font-family: var(--font-neo);
   font-size: var(--font-size-base);
   font-weight: var(--font-regular);
-  /* line-height: 1.5; */
-  /* color: var(--color-primary); */
   background-color: var(--color-primary);
 }
 

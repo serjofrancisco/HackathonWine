@@ -2,6 +2,7 @@ import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 import { MdLocationOn } from 'react-icons/md';
 import PropTypes from 'prop-types';
+import '../pages/styles/LandingPage.css';
 
 export default function StoreCard({ store }) {
   const { imgUrl, title, address, phone, mapsUrl } = store;

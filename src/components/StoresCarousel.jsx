@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
 import StoreCard from './StoreCard';
 import Carousel from './Carousel';
 
@@ -38,13 +36,11 @@ export default function LandingPage() {
 
   return (
     <>
-      <Header />
       <Carousel perView="3">
         {storesList.map((store, index) => (
           <StoreCard key={index} store={store} />
         ))}
       </Carousel>
-      <Footer />
     </>
   );
 }
