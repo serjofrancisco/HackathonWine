@@ -22,7 +22,7 @@ export default function WineCard(wine) {
   } = wine.wine || wine;
   return (
     <div className="container-geral-wine-card">
-      {/* <div className="container-wine-card" data-testid="winecard"> */}
+      {/* <div className="container-wine-card" > */}
       <div className="container-nome-flag-wine">
         <img className="imagem-winecard-bandeira" src={flag} alt={country} />
         <img className="imagem-winecard-vinho" src={image} alt={name} />

@@ -12,8 +12,4 @@ describe('Testa o componente WineCard', () => {
         const wineBanner = screen.getByTestId('wine-banner');
         expect(wineBanner).toBeInTheDocument();
     })
-    // it('verifica se ele possui a quantidade correta de vinhos', () => {
-    //     const wineCard = screen.getAllByTestId('winecard');
-    //     expect(wineCard).toHaveLength(10);
-    // });
 });
