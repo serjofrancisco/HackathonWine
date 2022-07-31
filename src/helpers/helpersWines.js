@@ -1,7 +1,8 @@
-export function mapWines(Wines, WineCard, limit, sorted) {
+export function mapWines(Wines, WineCard, limit, sorted, page) {
   if (sorted) Wines.sort(() => Math.random() - 0.5);
-  console.log(Wines);
-  return Wines.map((wine, i) => (i < limit ? <WineCard {...wine} key={wine.id} /> : null));
+  return Wines.map((wine, i) =>
+    i < limit ? <WineCard {...wine} page={page === 'store'} key={i} /> : null
+  );
 }
 
 export function filterWines(Wines, countryFilter, minPrice, maxPrice) {

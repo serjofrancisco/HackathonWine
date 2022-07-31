@@ -4,6 +4,7 @@ import { getAllWines } from '../services/shopApi';
 import { mapWines, filterWines } from '../helpers/helpersWines';
 import { MyDispatchContext, MyContext } from '../contexts/Context';
 import WineCard from '../components/WineCard';
+import Header from '../components/Header';
 export default function StorePage() {
   const { setWines } = useContext(MyDispatchContext);
   const { Wines, maxPrice, minPrice, countryFilter } = useContext(MyContext);
@@ -26,8 +27,9 @@ export default function StorePage() {
 
   return (
     <div>
+      <Header />
       <FilterStore />
-      {mapWines(Filter, WineCard, 10, false)}
+      {mapWines(Filter, WineCard, 10, false, 'store')}
     </div>
   );
 }
