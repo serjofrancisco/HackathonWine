@@ -5,6 +5,7 @@ import { mapWines, filterWines } from '../helpers/helpersWines';
 import { MyDispatchContext, MyContext } from '../contexts/Context';
 import WineCard from '../components/WineCard';
 import Header from '../components/Header';
+import '../pages/styles/StorePage.css';
 export default function StorePage() {
   const { setWines } = useContext(MyDispatchContext);
   const { Wines, maxPrice, minPrice, countryFilter } = useContext(MyContext);
@@ -29,7 +30,7 @@ export default function StorePage() {
     <div>
       <Header />
       <FilterStore />
-      {mapWines(Filter, WineCard, 60, false, 'store')}
+      <div className="container-store">{mapWines(Filter, WineCard, 10, false, 'store')}</div>
     </div>
   );
 }
