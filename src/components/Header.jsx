@@ -2,8 +2,8 @@ import React from 'react';
 import './styles/Header.css';
 import wineLogo from '../images/wine.svg';
 import { Link } from 'react-router-dom';
-import { BsSearch } from 'react-icons/bs';
 import wineCart from '../images/wine-cart.svg';
+import SearchOption from './SearchOption';
 
 function Header() {
   return (
@@ -26,7 +26,7 @@ function Header() {
         </Link>
       </div>
       <div className="header-rigth">
-        <BsSearch />
+        <SearchOption />
         <Link to="/carrinho">
           <img alt="carrinho" src={wineCart} className="cart-icon" />
         </Link>
