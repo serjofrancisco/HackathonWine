@@ -25,7 +25,7 @@ export default function WineBanner() {
     <section className="container-section-wine-card" data-testid="wine-banner">
       {Wines.length && (
         <Carousel perView="4" autoplay="1500">
-          {mapWines(Wines, WineCard, 60, true)}
+          {mapWines(Wines, WineCard, 60, true, 'banner')}
         </Carousel>
       )}
     </section>

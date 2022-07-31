@@ -23,14 +23,40 @@
 }
 
 .header-rigth {
-  border: 1px yellow solid;
   display: flex;
   align-items: center;
-  width: 30%;
-  justify-content: space-around;
+  width: 20%;
+  justify-content: space-evenly
 }
 
 .cart-icon {
   width: 100%;
 }
+
+.btn-login {
+  display: flex;
+  cursor: pointer;
+  color: #090909;
+  padding: 0.5em 1.2em;
+  font-size: 12px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
+ }
+ 
+ .btn-login:hover {
+  border: 1px solid white;
+ }
+ 
+ .btn-login:active {
+  box-shadow: 4px 4px 12px #c5c5c5,
+              -4px -4px 12px #ffffff;
+ }
+
+ .login {
+  margin-left: 5px;
+ }
 
