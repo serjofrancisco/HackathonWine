@@ -31,7 +31,6 @@ export default function WineCard(wine) {
         )}
 
         <div className="container-wine-card-rating"></div>
-
       </div>
     </div>
   );
