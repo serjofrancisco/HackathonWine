@@ -30,7 +30,7 @@ function Header() {
       </div>
       <div className="header-rigth">
         <SearchOption />
-        <Link to="/carrinho">
+        <Link to="/cart">
           <img alt="carrinho" src={cartItems ? cartFull : wineCart} className="cart-icon" />
         </Link>
         <button className="btn-login">
